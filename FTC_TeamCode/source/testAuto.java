@@ -6,6 +6,9 @@ import com.pedropathing.geometry.Pose;
 import com.pedropathing.paths.PathChain;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+
+import org.firstinspires.ftc.teamcode.pedroPathing.PeakFTC2025.FTC_TeamCode.source.Constants;
+
 @Autonomous(name = "Test Auto", group = "Examples")
 public class testAuto extends LinearOpMode{
     public PathChain Path1;

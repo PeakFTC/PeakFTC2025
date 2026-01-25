@@ -8,6 +8,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.pedropathing.util.Timer;
 
+import org.firstinspires.ftc.teamcode.pedroPathing.PeakFTC2025.FTC_TeamCode.source.Constants;
+
 
 @TeleOp
 public class SampleAutoPathing extends OpMode {

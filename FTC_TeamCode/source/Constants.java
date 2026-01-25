@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.pedroPathing;
+package org.firstinspires.ftc.teamcode.pedroPathing.PeakFTC2025.FTC_TeamCode.source;
 
 import com.pedropathing.control.FilteredPIDFCoefficients;
 import com.pedropathing.control.PIDFCoefficients;
@@ -16,7 +16,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.DistanceUnit;
 
 public class Constants {
     public static FollowerConstants followerConstants = new FollowerConstants()
-            .mass(30)
+            .mass(13.8)
             .forwardZeroPowerAcceleration(-35.837)
             .lateralZeroPowerAcceleration(-95.29854)
             .translationalPIDFCoefficients(new PIDFCoefficients(0.15,0,0.01,0.02))
@@ -24,7 +24,7 @@ public class Constants {
             .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.7,0,0.00008,0.82, 0.025))
             .centripetalScaling(0.0005);
     public static MecanumConstants driveConstants = new MecanumConstants()
-            .maxPower(1)
+            .maxPower(.4)
             .rightFrontMotorName("FR")
             .rightRearMotorName("BR")
             .leftFrontMotorName("FL")
@@ -33,14 +33,14 @@ public class Constants {
             .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
             .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
             .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-            .xVelocity(10.574555)
-            .yVelocity(17.11);
+            .xVelocity(40)
+            .yVelocity(35);
 
-    public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1, 1);
+    public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1.5, 1);
 
     public static PinpointConstants localizerConstants = new PinpointConstants()
             .forwardPodY(-8)
-            .strafePodX(-9)
+            .strafePodX(8)
             .distanceUnit(DistanceUnit.INCH)
             .hardwareMapName("pinpoint")
             .encoderResolution(GoBildaPinpointDriver.GoBildaOdometryPods.goBILDA_4_BAR_POD)
