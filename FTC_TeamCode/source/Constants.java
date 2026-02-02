@@ -24,7 +24,7 @@ public class Constants {
             .drivePIDFCoefficients(new FilteredPIDFCoefficients(0.7,0,0.00008,0.82, 0.025))
             .centripetalScaling(0.0005);
     public static MecanumConstants driveConstants = new MecanumConstants()
-            .maxPower(.4)
+            .maxPower(1)
             .rightFrontMotorName("FR")
             .rightRearMotorName("BR")
             .leftFrontMotorName("FL")
@@ -33,8 +33,8 @@ public class Constants {
             .leftRearMotorDirection(DcMotorSimple.Direction.REVERSE)
             .rightFrontMotorDirection(DcMotorSimple.Direction.FORWARD)
             .rightRearMotorDirection(DcMotorSimple.Direction.FORWARD)
-            .xVelocity(40)
-            .yVelocity(35);
+            .xVelocity(75) //40
+            .yVelocity(65); //35
 
     public static PathConstraints pathConstraints = new PathConstraints(0.99, 100, 1.5, 1);
 
