@@ -436,9 +436,9 @@ public class BlueTeleOp extends OpMode {
     }
 
     private void moveDriveTrain() {
-        double forward = gamepad1.right_stick_y;
-        double turn = -gamepad1.right_stick_x;
-        double strafe = -gamepad1.left_stick_x;
+        double forward = -gamepad1.right_stick_y;
+        double turn = gamepad1.right_stick_x;
+        double strafe = gamepad1.left_stick_x;
 
         double fl = forward + strafe + turn;
         double fr = forward - strafe - turn;

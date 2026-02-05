@@ -161,7 +161,7 @@ public class CloseBlueAuto extends LinearOpMode {
             follower.update();
             updateTelemetry();
         }
-        sleep(500);
+        intakeWaitTime();
 
         setIntakeHold();  // Path 4 complete - switch to hold mode
         // Flywheels already spinning from after previous shot
@@ -228,6 +228,14 @@ public class CloseBlueAuto extends LinearOpMode {
         sleep(200);  // REDUCED from 500ms
 
  */
+    }
+
+    void intakeWaitTime()
+    {
+        timer.reset();
+        double waitTime = timer.milliseconds();
+        while(!colorSensor.isIntakeFull() && timer.milliseconds()-waitTime <1000);
+
     }
 
     // ==================== SHOOTING METHODS ====================

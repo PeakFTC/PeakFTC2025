@@ -64,7 +64,6 @@ public class colorSensorPeak {
     }
 
     public boolean isOuttakeEmpty(){
-
         DetectedColor color1,color2;
         color1=detectColor();
         color2=detectColor1();
@@ -76,6 +75,20 @@ public class colorSensorPeak {
             return true;
         }
         return false;
+    }
+    public boolean isIntakeFull(){
+        DetectedColor color1,color2;
+        color1=detectColor();
+        color2=detectColor1();
+        telemetry.addData("Color1", color1);
+        telemetry.addData("Color2", color2);
+
+        if( ( (color1.name() == DetectedColor.GREEN.name() )|| (color1.name() == DetectedColor.PURPLE.name()) ) &&
+            ( (color2.name() == DetectedColor.GREEN.name())||(color2.name() == DetectedColor.PURPLE.name()) ) ){
+            return true;
+        }
+        return false;
+
     }
 
     public String getColorString() {
